@@ -9,7 +9,7 @@
 </p>
 <p align="center">
   Previous iterations:
-  <a href="https://github.com/joychetry/v1/" target="_blank">v1</a>,
+  <a href="https://github.com/joychetry/v1/" target="_blank">v1</a>
 </p>
 
 ![demo](https://raw.githubusercontent.com/joychetry/v2/master/page/1/JoyChetrycom-v1-ss.png)
