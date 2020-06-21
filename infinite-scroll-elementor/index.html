@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+
+<title>Infinite Scroll in Elementor (New Plugin) - Joy Chetry</title>
+<meta name="description" content="Infinite Scroll Elementor adds functions like Infinite Scroll, AJAX Load More Button and Lazy Loading to Elementor Post Grid, WooCommerce and post templates.">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Infinite Scroll in Elementor (New Plugin) - Joy Chetry">
+<meta property="og:description" content="Infinite Scroll Elementor adds functions like Infinite Scroll, AJAX Load More Button and Lazy Loading to Elementor Post Grid, WooCommerce and post templates.">
+<meta property="og:url" content="https://joychetry.github.io/v2/infinite-scroll-elementor/">
+<meta property="og:site_name" content="Joy Chetry">
+<meta property="article:publisher" content="https://facebook.com/chetryjoy">
+<meta property="article:tag" content="ajax">
+<meta property="article:tag" content="elementor">
+<meta property="article:tag" content="infinite scroll">
+<meta property="article:tag" content="lazy loading">
+<meta property="article:tag" content="load more">
+<meta property="article:tag" content="pagination">
+<meta property="article:tag" content="plugin">
+<meta property="article:tag" content="wordpress">
+<meta property="article:section" content="Plugin">
+<meta property="article:published_time" content="2020-05-25T21:37:25+05:30">
+<meta property="article:modified_time" content="2020-05-29T12:08:30+05:30">
+<meta property="og:updated_time" content="2020-05-29T12:08:30+05:30">
+<meta property="og:image" content="https://joychetry.github.io/v2/wp-content/uploads/infinite-scroll-elementor.jpg">
+<meta property="og:image:width" content="1160">
+<meta property="og:image:height" content="680">
+<meta property="og:image:alt" content="Infinite Scroll Elementor – Simple Tutorial">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Infinite Scroll in Elementor (New Plugin) - Joy Chetry">
+<meta name="twitter:description" content="Infinite Scroll Elementor adds functions like Infinite Scroll, AJAX Load More Button and Lazy Loading to Elementor Post Grid, WooCommerce and post templates.">
+<meta name="twitter:site" content="@joychetri">
+<meta name="twitter:creator" content="@joychetri">
+<meta name="twitter:image" content="https://joychetry.github.io/v2/wp-content/uploads/infinite-scroll-elementor.jpg">
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"BlogPosting","headline":"Infinite Scroll in Elementor (New Plugin) - Joy Chetry","description":"Infinite Scroll Elementor adds functions like Infinite Scroll, AJAX Load More Button, and Lazy Loading to Elementor Post Grid, WooCommerce, and post templates.","datePublished":"2020-05-25T21:37:25+05:30","dateModified":"2020-05-29T12:08:30+05:30","publisher":{"@type":"Organization","name":"Joy Chetry","logo":{"@type":"ImageObject","url":"https:\/\/joychetry.github.io\/v2\/wp-content\/uploads\/joychetry-blogo-e1575399264155.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/joychetry.github.io\/v2\/infinite-scroll-elementor\/"},"author":{"@type":"Person","name":"Joy Chetry"},"image":{"@type":"ImageObject","url":"https:\/\/joychetry.github.io\/v2\/wp-content\/uploads\/infinite-scroll-elementor.jpg","width":1160,"height":680}}]}</script>
+
+
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://joychetry.github.io/v2/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpdiscuz-frontend-css-css" href="https://joychetry.github.io/v2/style.css" type="text/css" media="all">
+<style id="wpdiscuz-frontend-css-inline-css" type="text/css">
+
+#wpdcom .wpd-blog-administrator .wpd-comment-label{color: #ffffff; background-color: #093FA3; border: none;}
+#wpdcom .wpd-blog-administrator .wpd-comment-author, #wpdcom .wpd-blog-administrator .wpd-comment-author a{color: #093FA3;}
+#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-administrator .wpd-avatar img{border-color: #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-administrator{border-left: 3px solid #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-administrator .wpd-avatar img{border-bottom-color: #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-blog-administrator .wpd-comment-subheader{border-top: 1px dashed #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-administrator .wpd-comment-right{border-left: 1px solid #093FA3;}
+
+#wpdcom .wpd-blog-editor .wpd-comment-label{color: #ffffff; background-color: #093FA3; border: none;}
+#wpdcom .wpd-blog-editor .wpd-comment-author, #wpdcom .wpd-blog-editor .wpd-comment-author a{color: #093FA3;}
+#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-editor .wpd-avatar img{border-color: #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-editor{border-left: 3px solid #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-editor .wpd-avatar img{border-bottom-color: #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-blog-editor .wpd-comment-subheader{border-top: 1px dashed #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-editor .wpd-comment-right{border-left: 1px solid #093FA3;}
+
+#wpdcom .wpd-blog-author .wpd-comment-label{color: #ffffff; background-color: #093FA3; border: none;}
+#wpdcom .wpd-blog-author .wpd-comment-author, #wpdcom .wpd-blog-author .wpd-comment-author a{color: #093FA3;}
+#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-author .wpd-avatar img{border-color: #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-author .wpd-avatar img{border-bottom-color: #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-blog-author .wpd-comment-subheader{border-top: 1px dashed #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-author .wpd-comment-right{border-left: 1px solid #093FA3;}
+
+#wpdcom .wpd-blog-contributor .wpd-comment-label{color: #ffffff; background-color: #093FA3; border: none;}
+#wpdcom .wpd-blog-contributor .wpd-comment-author, #wpdcom .wpd-blog-contributor .wpd-comment-author a{color: #093FA3;}
+#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-contributor .wpd-avatar img{border-color: #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-contributor .wpd-avatar img{border-bottom-color: #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-blog-contributor .wpd-comment-subheader{border-top: 1px dashed #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-contributor .wpd-comment-right{border-left: 1px solid #093FA3;}
+
+#wpdcom .wpd-blog-subscriber .wpd-comment-label{color: #ffffff; background-color: #093FA3; border: none;}
+#wpdcom .wpd-blog-subscriber .wpd-comment-author, #wpdcom .wpd-blog-subscriber .wpd-comment-author a{color: #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-subscriber .wpd-avatar img{border-bottom-color: #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-blog-subscriber .wpd-comment-subheader{border-top: 1px dashed #093FA3;}
+
+#wpdcom .wpd-blog-post_author .wpd-comment-label{color: #ffffff; background-color: #093FA3; border: none;}
+#wpdcom .wpd-blog-post_author .wpd-comment-author, #wpdcom .wpd-blog-post_author .wpd-comment-author a{color: #093FA3;}
+#wpdcom .wpd-blog-post_author .wpd-avatar img{border-color: #093FA3;}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-post_author .wpd-avatar img{border-color: #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-post_author{border-left: 3px solid #093FA3;}
+#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-post_author .wpd-avatar img{border-bottom-color: #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-blog-post_author .wpd-comment-subheader{border-top: 1px dashed #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-post_author .wpd-comment-right{border-left: 1px solid #093FA3;}
+
+#wpdcom .wpd-blog-guest .wpd-comment-label{color: #ffffff; background-color: #093FA3; border: none;}
+#wpdcom .wpd-blog-guest .wpd-comment-author, #wpdcom .wpd-blog-guest .wpd-comment-author a{color: #093FA3;}
+#wpdcom.wpd-layout-3 .wpd-blog-guest .wpd-comment-subheader{border-top: 1px dashed #093FA3;}
+            #wpdcom .wpd-comment-text p{font-size:16px;}
+            #wpdcom .wpd-thread-head .wpd-thread-info{ border-bottom:2px solid #093FA3;}
+            #wpdcom .wpd-thread-head .wpd-thread-info.wpd-reviews-tab svg{fill: #093FA3;}
+            #wpdcom .wpd-thread-head .wpdiscuz-user-settings{border-bottom: 2px solid #093FA3;}
+            #wpdcom .wpd-thread-head .wpdiscuz-user-settings:hover{color: #093FA3;}
+            #wpdcom .wpd-comment .wpd-follow-link:hover{color: #093FA3;}
+            #wpdcom .wpd-comment-status .wpd-sticky{color: #093FA3;}
+            #wpdcom .wpd-thread-filter .wpdf-active{color: #093FA3; border-bottom-color:#093FA3;}
+            #wpdcom .wpd-comment-info-bar {border: 1px dashed #3b66b6; background: #e7ecf6; }
+            #wpdcom .wpd-comment-info-bar .wpd-current-view i{color: #093FA3;}
+            #wpdcom .wpd-filter-view-all:hover{background: #093FA3;}
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > label {color: #DDDDDD;}
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating:not(:checked) > label:hover,
+            .wpdiscuz-rating:not(:checked) > label:hover ~ label {}
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > input ~ label:hover,
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label,
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label{color: #FFED85;}
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover,
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover,
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > label:hover ~ input:checked ~ label,
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked + label:hover ~ label,
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover ~ label, .wpd-custom-field .wcf-active-star,
+            #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label{ color:#FFD700;}
+            #wpdcom .wpd-comment .wpd-follow-active{color:#ff7a00;}
+            #wpdcom .page-numbers{color:#555;border:#555 1px solid;}
+            #wpdcom span.current{background:#555;}
+            #wpdcom.wpd-layout-1 .wpd-new-loaded-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6;}
+            #wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6;}
+            #wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment.wpd-reply > .wpd-comment-wrap > .wpd-comment-right{background:transparent;}
+            #wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment.wpd-reply > .wpd-comment-wrap {background:#FFFAD6;}
+            #wpdcom.wpd-layout-3 .wpd-new-loaded-comment.wpd-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6;}
+            #wpdcom .wpd-follow:hover i, #wpdcom .wpd-unfollow:hover i, #wpdcom .wpd-comment .wpd-follow-active:hover i{color:#093FA3;}
+            #wpdcom .wpdiscuz-readmore{cursor:pointer;color:#093FA3;}
+            .wpd-custom-field .wcf-pasiv-star, #wpcomm .wpdiscuz-item .wpdiscuz-rating > label {color: #DDDDDD;}
+                        .wpd-wrapper .wpd-list-item.wpd-active{border-top: 3px solid #093FA3;}
+            #wpdcom.wpd-layout-2 .wpd-comment.wpd-reply.wpd-unapproved-comment .wpd-comment-wrap{border-left: 3px solid #FFFAD6;}
+            #wpdcom.wpd-layout-3 .wpd-comment.wpd-reply.wpd-unapproved-comment .wpd-comment-right{border-left: 1px solid #FFFAD6;}
+            #wpdcom .wpd-prim-button{background-color: #093FA3; color: #FFFFFF;}
+            #wpdcom .wpd_label__check i.wpdicon-on{color: #093FA3; border: 1px solid #849fd1;}
+            #wpd-bubble-wrapper #wpd-bubble-all-comments-count{color:#093FA3;}
+            #wpd-bubble-wrapper > div{background-color:#093FA3;}
+            #wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message{background-color:#093FA3;}
+            #wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message::before{border-right-color:#093FA3;}
+            #wpd-bubble-wrapper.wpd-right-corner > #wpd-bubble #wpd-bubble-add-message::before{border-left-color:#093FA3;}
+            .wpd-inline-icon-wrapper path.wpd-inline-icon-first{fill:#093FA3;}
+            .wpd-inline-icon-count{background-color:#093FA3;}
+            .wpd-inline-icon-count::before{border-right-color:#093FA3;}
+            .wpd-inline-form-wrapper::before{border-bottom-color:#093FA3;}
+            .wpd-inline-form-question{background-color:#093FA3;}
+            .wpd-inline-form{background-color:#093FA3;}
+            .wpd-last-inline-comments-wrapper{border-color:#093FA3;}
+            .wpd-last-inline-comments-wrapper::before{border-bottom-color:#093FA3;}
+            .wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments{background:#093FA3;}
+            .wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:hover,.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:active,.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:focus{background-color:#093FA3;}
+                    #wpdcom .ql-snow .ql-tooltip[data-mode="link"]::before{content:"Enter link:";}
+        #wpdcom .ql-snow .ql-tooltip.ql-editing a.ql-action::after{content:"Save";}
+        .comments-area{width:auto;}#comments{margin-top:0;margin-bottom:0}#wpdcom .wpd-form-wrap .wpd-form-head{margin-top:24px}#wpd-threads .wpd-thread-list{padding-top:24px!important;padding-bottom:24px!important}#wpd-threads{margin-top:0!important}.wpd-comment-right .wpd-comment-header{background-color:#fff!important}.wpd-reply-to{background-color:#e2ecf7!important}
+</style>
+<link rel="stylesheet" id="wpdiscuz-combo-css-css" href="https://joychetry.github.io/v2/wp-content/plugins/wpdiscuz/assets/css/wpdiscuz-combo-no_fa.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ez-icomoon-css" href="https://joychetry.github.io/v2/wp-content/plugins/easy-table-of-contents/vendor/icomoon/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ez-toc-css" href="https://joychetry.github.io/v2/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css" type="text/css" media="all">
+<style id="ez-toc-inline-css" type="text/css">
+div#ez-toc-container p.ez-toc-title {font-size: 20px;}div#ez-toc-container p.ez-toc-title {font-weight: 600;}div#ez-toc-container ul li {font-size: 19.2px;}div#ez-toc-container {background: #f4f7fa;border: 1px solid #ffffff00;width: 100%;}div#ez-toc-container p.ez-toc-title {color: #ffffff;}div#ez-toc-container ul.ez-toc-list a {color: #4d6075;}div#ez-toc-container ul.ez-toc-list a:hover {color: #093fa2;}div#ez-toc-container ul.ez-toc-list a:visited {color: #4d6075;}
+</style>
+<link rel="stylesheet" id="hello-elementor-css" href="https://joychetry.github.io/v2/wp-content/themes/hello-elementor/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="hello-elementor-theme-style-css" href="https://joychetry.github.io/v2/wp-content/themes/hello-elementor/theme.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="https://joychetry.github.io/v2/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="https://joychetry.github.io/v2/wp-content/uploads/elementor/css/global.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-992-css" href="https://joychetry.github.io/v2/wp-content/uploads/elementor/css/post-992.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-7-css" href="https://joychetry.github.io/v2/wp-content/uploads/elementor/css/post-7.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-51-css" href="https://joychetry.github.io/v2/wp-content/uploads/elementor/css/post-51.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-769-css" href="https://joychetry.github.io/v2/wp-content/uploads/elementor/css/post-769.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-499-css" href="https://joychetry.github.io/v2/wp-content/uploads/elementor/css/post-499.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&ver=5.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-brands-css" href="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css" type="text/css" media="all">
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+
+
+
+
+
+
+<link rel="icon" href="https://joychetry.github.io/v2/wp-content/uploads/cropped-favicon-blue-joy-32x32.jpg" sizes="32x32">
+<link rel="icon" href="https://joychetry.github.io/v2/wp-content/uploads/cropped-favicon-blue-joy-192x192.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://joychetry.github.io/v2/wp-content/uploads/cropped-favicon-blue-joy-180x180.jpg">
+<meta name="msapplication-TileImage" content="https://joychetry.github.io/v2/wp-content/uploads/cropped-favicon-blue-joy-270x270.jpg">
+</head>
+<body class="post-template-default single single-post postid-1157 single-format-standard wp-custom-logo elementor-default elementor-kit-992 elementor-page-769">
+
+		<div data-elementor-type="header" data-elementor-id="7" class="elementor elementor-7 elementor-location-header" data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+						<header class="elementor-element elementor-element-b3ce23c elementor-section-stretched elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b3ce23c" data-element_type="section" id="top-nav" data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'>
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1de62ae elementor-column elementor-col-50 elementor-top-column" data-id="1de62ae" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9608407 elementor-widget elementor-widget-image" data-id="9608407" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://joychetry.github.io/v2/">
+							<img width="1" height="1" src="https://joychetry.github.io/v2/wp-content/uploads/JoyChetry-logo.svg" class="elementor-animation-buzz-out attachment-large size-large" alt="Joy Chetry">								</a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a539fee elementor-column elementor-col-50 elementor-top-column" data-id="a539fee" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-366285cf elementor-section-content-middle elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="366285cf" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-43c90e3d elementor-column elementor-col-50 elementor-inner-column" data-id="43c90e3d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-37ac20a1 elementor-nav-menu__align-right elementor-nav-menu--dropdown-mobile elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget__width-auto elementor-nav-menu--indicator-classic elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="37ac20a1" data-element_type="widget" data-settings='{"full_width":"stretch","layout":"horizontal","toggle":"burger"}' data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-slide"><ul id="menu-1-37ac20a1" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://joychetry.github.io/v2/about/" class="elementor-item">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1192"><a href="https://joychetry.github.io/v2/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="https://joychetry.github.io/v2/contact/" class="elementor-item">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1195"><a href="https://joychetry.github.io/v2/playlist/" class="elementor-item">Playlist</a></li>
+</ul></nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i class="eicon-menu-bar" aria-hidden="true"></i>
+			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true"><ul id="menu-2-37ac20a1" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://joychetry.github.io/v2/about/" class="elementor-item">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1192"><a href="https://joychetry.github.io/v2/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="https://joychetry.github.io/v2/contact/" class="elementor-item">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1195"><a href="https://joychetry.github.io/v2/playlist/" class="elementor-item">Playlist</a></li>
+</ul></nav>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6ed7fe11 elementor-column elementor-col-50 elementor-inner-column" data-id="6ed7fe11" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-63b10fae elementor-shape-square elementor-widget__width-auto elementor-widget elementor-widget-social-icons" data-id="63b10fae" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper">
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-819f628" href="https://instagram.com/joychetry/" target="_blank">
+					<span class="elementor-screen-only">Instagram</span>
+					<i class="fab fa-instagram"></i>				</a>
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-ce9d62b" href="https://twitter.com/joychetri/" target="_blank">
+					<span class="elementor-screen-only">Twitter</span>
+					<i class="fab fa-twitter"></i>				</a>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</header>
+					</div>
+		</div>
+		</div>
+				<div data-elementor-type="single" data-elementor-id="769" class="elementor elementor-769 elementor-location-single post-1157 post type-post status-publish format-standard has-post-thumbnail hentry category-plugin tag-ajax tag-elementor tag-infinite-scroll tag-lazy-loading tag-load-more tag-pagination tag-plugin tag-wordpress" data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+						<article class="elementor-element elementor-element-72a7a030 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="72a7a030" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4bcba5f8 elementor-column elementor-col-100 elementor-top-column" data-id="4bcba5f8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-19b0c4b6 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="19b0c4b6" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Infinite Scroll in Elementor (New Plugin)</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6251733e elementor-widget elementor-widget-text-editor" data-id="6251733e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Updated on – May 29, 2020</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-363394c2 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="363394c2" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1160" height="680" src="https://joychetry.github.io/v2/wp-content/uploads/infinite-scroll-elementor.jpg" class="attachment-full size-full" alt="Infinite Scroll Elementor – Simple Tutorial" srcset="https://joychetry.github.io/v2/wp-content/uploads/infinite-scroll-elementor.jpg 1160w,https://joychetry.github.io/v2/wp-content/uploads/infinite-scroll-elementor-300x176.jpg 300w,https://joychetry.github.io/v2/wp-content/uploads/infinite-scroll-elementor-1024x600.jpg 1024w,https://joychetry.github.io/v2/wp-content/uploads/infinite-scroll-elementor-768x450.jpg 768w" sizes="(max-width: 1160px) 100vw, 1160px">											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3317d6d elementor-widget elementor-widget-theme-post-excerpt" data-id="3317d6d" data-element_type="widget" data-widget_type="theme-post-excerpt.default">
+				<div class="elementor-widget-container">
+			Infinite Scroll Elementor adds functions like Infinite Scroll, AJAX Load More Button, and Lazy Loading to Elementor Post Grid, WooCommerce, and post templates.		</div>
+				</div>
+				<div class="elementor-element elementor-element-5459d0fb elementor-widget elementor-widget-theme-post-content" data-id="5459d0fb" data-element_type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+			<p>A few days ago while I was working on a new project, I was asked by the client to add Ajax Load More and Infinite Scroll functionality to the Elementor Post List Blocks. I had everything ready in the Post List Blocks with Custom CSS and ACF (Advanced Custom Fields) but when I looked for the Load More button in the Pagination section, it wasn’t there.  So I looked for some other way to implement it but I couldn’t find any accurate solution to add ajax to the default <a href="#pagination-for"><span style="text-decoration: underline;">Elementor post widgets</span></a> and ended up buying a plugin.</p>
+<p>The problem with these custom plugins is that they come with additional widgets and extra hooks that you would use on very rarely or never even use. They inject a lot of extra CSS and JavaScript files on every page of the website and while doing these they eat up a lot of server resources and while doing these the website becomes bloated and heavy. And as a result, the GTmetrix and Google PageSpeed scores go down which will indirectly affect your ranking in Google.</p>
+<p>However, that was past but now with some help from around the web and<a href="https://developers.elementor.com/" target="_blank" rel="nofollow noopener noreferrer"> Elementor developer documentation</a> I have found a new plugin addon for Elementor that adds Ajax Load More and Infinite Scroll functionality to Elementor Posts, Elementor Products, Elementor Posts Archive and Elementor Products Archive Widgets. It also has Custom Selectors so that you can add them to every other Elementor widget. And the great thing is that it adds little to no JavaScript code and zero CSS.<br>
+The plugin is currently in the queue for approval in the <a href="https://wordpress.org/plugins/" rel="nofollow sponsored">WordPress Plugin Repository</a>.</p>
+<div id="ez-toc-container" class="ez-toc-v2_0_11 counter-hierarchy">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Table of Contents</p>
+<span class="ez-toc-title-toggle"></span></div>
+<nav><ul class="ez-toc-list ez-toc-list-level-1"><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-1" href="#Widgets" title="Widgets">Widgets</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-2" href="#Pagination_applicable_to" title="Pagination applicable to">Pagination applicable to</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-3" href="#Options" title="Options">Options</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-4" href="#Extra_Options" title="Extra Options">Extra Options</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-5" href="#Tutorial" title="Tutorial">Tutorial</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-6" href="#1_How_to_use_Infinite_Scroll" title="1. How to use Infinite Scroll?">1. How to use Infinite Scroll?</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-7" href="#2_How_to_use_Load_More_Button" title="2. How to use Load More Button?">2. How to use Load More Button?</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-8" href="#3_How_to_show_Loading_Image_while_scrolling" title="3. How to show Loading Image while scrolling?">3. How to show Loading Image while scrolling?</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-9" href="#4_How_to_show_%E2%80%9CNo_More_Items_Left%E2%80%9D_at_the_end" title="4. How to show “No More Items Left” at the end?">4. How to show “No More Items Left” at the end?</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-10" href="#5_What_is_and_how_to_use_%E2%80%9CJetSmartFilters%E2%80%9D" title="5. What is and how to use “JetSmartFilters”?">5. What is and how to use “JetSmartFilters”?</a></li></ul></li></ul></nav></div>
+<h2><span class="ez-toc-section" id="Widgets"></span>Widgets<span class="ez-toc-section-end"></span></h2>
+<ol>
+<li>Infinite Scroll</li>
+<li>Load More</li>
+<li>Lazy Load Single Post</li>
+</ol>
+<h2 id="pagination-for"><span class="ez-toc-section" id="Pagination_applicable_to"></span>Pagination applicable to<span class="ez-toc-section-end"></span></h2>
+<ol>
+<li>Elementor Posts</li>
+<li>Elementor Products</li>
+<li>Elementor Posts Archive</li>
+<li>Elementor Products Archive</li>
+<li>Custom Selectors</li>
+</ol>
+<h2><span class="ez-toc-section" id="Options"></span>Options<span class="ez-toc-section-end"></span></h2>
+<ol>
+<li>Adjust Image Ratio</li>
+<li>Enable support for JetSmartFilters</li>
+<li>Add Bottom Offset</li>
+<li>Add Animation Time</li>
+</ol>
+<h2><span class="ez-toc-section" id="Extra_Options"></span>Extra Options<span class="ez-toc-section-end"></span></h2>
+<ol>
+<li>Add Loading Image</li>
+<li>Add No More Items Text</li>
+</ol>
+<h2><span class="ez-toc-section" id="Tutorial"></span>Tutorial<span class="ez-toc-section-end"></span></h2>
+<h3><span class="ez-toc-section" id="1_How_to_use_Infinite_Scroll"></span>1. How to use Infinite Scroll?<span class="ez-toc-section-end"></span></h3>
+<ol>
+<li>Locate the <strong>Infinite Scroll</strong> widget in the Elements panel, under <strong>Infinite Scroll Elementor</strong> category, and place it below the widget you want.</li>
+<li>Select “Yes” beside <strong>Infinite Scroll</strong> (don’t do anything if it is “Yes” by default).</li>
+<li>Select target widget from <strong>Pagination For</strong> dropdown list.</li>
+<li>Make <strong>Image Ratio</strong> “Yes” if you have modified Image Ratio in the target widget. Turn it “Yes” or “No” to what fits best.</li>
+<li>Turn <strong>JetSmartFilters</strong> to “Yes” if you are using JetSmartFilters plugin, ignore if you do not use it.</li>
+<li>Adjust <strong>Bottom Offset</strong> and <strong>Animation Time</strong> if you want to.</li>
+<li><strong>Optional:</strong> In <strong>Extra Options</strong> section you can assign <strong>Loading Image ID</strong> and <strong>No More Items ID</strong> if you want to.</li>
+</ol>
+<h3><span class="ez-toc-section" id="2_How_to_use_Load_More_Button"></span>2. How to use Load More Button?<span class="ez-toc-section-end"></span></h3>
+<ol>
+<li>Locate the <strong>Load More </strong>widget in the Elements panel, under <strong>Infinite Scroll Elementor</strong> category.</li>
+<li>Place it below the target widget (in the same section and column).</li>
+<li>Insert a <strong>section or inner section</strong> below the target Elementor widget.</li>
+<li>Give this section or inner section an <strong>ID or Class</strong> in Advanced section (e.g. load-more-posts).</li>
+<li>Add a Button widget inside this new section.</li>
+<li>In the <strong>Load More </strong>widget select “Yes” beside <strong>Load More</strong> (don’t do anything if it is “Yes” by default).</li>
+<li>In the input filed of <strong>Assign Load More ID</strong> insert the same ID (E.g. #load-more-posts) or class (E.g. .load-more-posts).</li>
+<li>Select target widget from <strong>Pagination For</strong> dropdown list.</li>
+<li>Make <strong>Image Ratio</strong> “Yes” if you have modified Image Ratio in the target widget. Turn it “Yes” or “No” to what fits best.</li>
+<li>Turn <strong>JetSmartFilters</strong> to “Yes” if you are using JetSmartFilters plugin, ignore if you do not use it.</li>
+<li>Adjust <strong>Bottom Offset</strong> and <strong>Animation Time</strong> if you want to.</li>
+<li><strong>Optional:</strong> In <strong>Extra Options</strong> section you can assign <strong>Loading Image ID</strong> and <strong>No More Items ID</strong> if you want to.</li>
+</ol>
+<h3><span class="ez-toc-section" id="3_How_to_show_Loading_Image_while_scrolling"></span>3. How to show Loading Image while scrolling?<span class="ez-toc-section-end"></span></h3>
+<ol>
+<li>Insert a section or inner section below the target widget and give it an ID or class (E.g. loading-image-container).</li>
+<li>Add an <strong>Image</strong> widget inside the new section, add an image or gif.</li>
+<li>Select <strong>Infinite Scroll</strong> or <strong>Load More</strong> widget.</li>
+<li>In the input field of <strong>Assign Loading Image ID</strong> under <strong>Extra Options</strong> section insert the same ID (E.g. #loading-image-container) or class (E.g. .loading-image-container).</li>
+</ol>
+<h3><span class="ez-toc-section" id="4_How_to_show_%E2%80%9CNo_More_Items_Left%E2%80%9D_at_the_end"></span>4. How to show “No More Items Left” at the end?<span class="ez-toc-section-end"></span></h3>
+<ul>
+<li>Insert a section or inner section below the target widget and give it an ID or class (E.g. no-more-image-container).</li>
+<li>Add an <strong>Image</strong> widget inside the new section, add an image or gif.</li>
+<li>Select <strong>Infinite Scroll</strong> or <strong>Load More</strong> widget.</li>
+<li>In the input field of <strong>Assign No More Items ID</strong> under <strong>Extra Options</strong> section insert the same ID (E.g. #no-more-image-container) or class (E.g. .no-more-image-container).</li>
+</ul>
+<h3><span class="ez-toc-section" id="5_What_is_and_how_to_use_%E2%80%9CJetSmartFilters%E2%80%9D"></span>5. What is and how to use “JetSmartFilters”?<span class="ez-toc-section-end"></span></h3>
+<ol>
+<li>This option enables compatibility for JetSmartFilters.</li>
+<li>It only works on a pagination base <strong>page</strong>.</li>
+<li>In JetSmartFilters widget set filter setting <strong>Apply type</strong> to “AJAX” and <strong>Apply on</strong> to “Value change”.</li>
+</ol>
+<p><a style="background-color: #24292e; color: #ffffff; padding: 8px 16px 8px 16px;" href="https://github.com/jifola/Scroll-And-Load-For-Elementor" target="_blank" rel="nofollow noopener noreferrer">Download from Github</a></p>
+		</div>
+				</div>
+				<div class="elementor-element elementor-element-34db15b3 elementor-widget elementor-widget-post-info" data-id="34db15b3" data-element_type="widget" data-widget_type="post-info.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-post-info">
+					<li class="elementor-icon-list-item elementor-repeater-item-99ef2f8" itemprop="about">
+													<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-terms">
+							<span class="elementor-post-info__item-prefix">Category - </span>
+										<span class="elementor-post-info__terms-list">
+				<a href="https://joychetry.github.io/v2/category/plugin/" class="elementor-post-info__terms-list-item">Plugin</a>				</span>
+					</span>
+								</li>
+				<li class="elementor-icon-list-item elementor-repeater-item-c4faf43" itemprop="about">
+													<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-terms">
+							<span class="elementor-post-info__item-prefix">Tags - </span>
+										<span class="elementor-post-info__terms-list">
+				<a href="https://joychetry.github.io/v2/tag/ajax/" class="elementor-post-info__terms-list-item">ajax</a>, <a href="https://joychetry.github.io/v2/tag/elementor/" class="elementor-post-info__terms-list-item">elementor</a>, <a href="https://joychetry.github.io/v2/tag/infinite-scroll/" class="elementor-post-info__terms-list-item">infinite scroll</a>, <a href="https://joychetry.github.io/v2/tag/lazy-loading/" class="elementor-post-info__terms-list-item">lazy loading</a>, <a href="https://joychetry.github.io/v2/tag/load-more/" class="elementor-post-info__terms-list-item">load more</a>, <a href="https://joychetry.github.io/v2/tag/pagination/" class="elementor-post-info__terms-list-item">pagination</a>, <a href="https://joychetry.github.io/v2/tag/plugin/" class="elementor-post-info__terms-list-item">plugin</a>, <a href="https://joychetry.github.io/v2/tag/wordpress/" class="elementor-post-info__terms-list-item">wordpress</a>				</span>
+					</span>
+								</li>
+				</ul>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-63627e7 elementor-share-buttons--skin-flat elementor-grid-2 elementor-share-buttons--view-icon-text elementor-share-buttons--shape-square elementor-share-buttons--color-official elementor-widget elementor-widget-share-buttons" data-id="63627e7" data-element_type="widget" data-widget_type="share-buttons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-grid">
+							<div class="elementor-grid-item">
+					<div class="elementor-share-btn elementor-share-btn_facebook">
+													<span class="elementor-share-btn__icon">
+								<i class="fab fa-facebook" aria-hidden="true"></i>
+								<span class="elementor-screen-only">Share on facebook</span>
+							</span>
+																			<div class="elementor-share-btn__text">
+																	<span class="elementor-share-btn__title">
+										SHARE									</span>
+															</div>
+											</div>
+				</div>
+								<div class="elementor-grid-item">
+					<div class="elementor-share-btn elementor-share-btn_twitter">
+													<span class="elementor-share-btn__icon">
+								<i class="fab fa-twitter" aria-hidden="true"></i>
+								<span class="elementor-screen-only">Share on twitter</span>
+							</span>
+																			<div class="elementor-share-btn__text">
+																	<span class="elementor-share-btn__title">
+										TWEET									</span>
+															</div>
+											</div>
+				</div>
+						</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-60f1f088 elementor-widget elementor-widget-post-comments" data-id="60f1f088" data-element_type="widget" data-widget_type="post-comments.theme_comments">
+				<div class="elementor-widget-container">
+			    <div class="wpdiscuz_top_clearing"></div>
+    <div id="comments" class="comments-area"><div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>    <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpdiscuz_no_avatar wpd-layout-3">
+                    <div class="wc_social_plugin_wrapper">
+                            </div>
+            <div class="wpd-form-wrap">
+                <div class="wpd-form-head">
+                                            <div class="wpd-sbs-toggle">
+                            <i class="far fa-envelope"></i> <span class="wpd-sbs-title">Subscribe</span> <i class="fas fa-caret-down"></i>
+                        </div>
+                                            <div class="wpd-auth">
+                                                <div class="wpd-login">
+                                                    </div>
+                    </div>
+                </div>
+                                                    <div class="wpdiscuz-subscribe-bar wpdiscuz-hidden">
+                                                    <form action="https://joychetry.github.io/v2/wp-admin/admin-ajax.php?action=wpdAddSubscription" method="post" id="wpdiscuz-subscribe-form">
+                                <div class="wpdiscuz-subscribe-form-intro">Notify of </div>
+                                <div class="wpdiscuz-subscribe-form-option" style="width:40%;">
+                                    <select class="wpdiscuz_select" name="wpdiscuzSubscriptionType">
+                                                                                    <option value="post">new follow-up comments</option>
+                                                                                                                                <option value="all_comment">new replies to my comments</option>
+                                                                                </select>
+                                </div>
+                                                                    <div class="wpdiscuz-item wpdiscuz-subscribe-form-email">
+                                        <input class="email" type="email" name="wpdiscuzSubscriptionEmail" required="required" value="" placeholder="Email">
+                                    </div>
+                                                                    <div class="wpdiscuz-subscribe-form-button">
+                                    <input id="wpdiscuz_subscription_button" class="wpd-prim-button" type="submit" value="›" name="wpdiscuz_subscription_button">
+                                </div> 
+                                <input type="hidden" id="wpdiscuz_subscribe_form_nonce" name="wpdiscuz_subscribe_form_nonce" value="7e6f4f2c08"><input type="hidden" name="_wp_http_referer" value="/infinite-scroll-elementor/">                            </form>
+                                                </div>
+                            <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0">
+            <div class="wpdiscuz-comment-message" style="display: block;"></div>
+                                        <form class="wpd_comm_form wpd_main_comm_form" method="post" enctype="multipart/form-data">
+                    <div class="wpd-field-comment">
+                        <div class="wpdiscuz-item wc-field-textarea">
+                            <div class="wpdiscuz-textarea-wrap ">
+                                            <div id="wpd-editor-wraper-0_0" style="display: none;">
+                <div id="wpd-editor-char-counter-0_0" class="wpd-editor-char-counter"></div>
+                <textarea id="wc-textarea-0_0" required name="wc_comment" class="wc_comment wpd-field"></textarea>
+                <div id="wpd-editor-0_0"></div>
+                        <div id="wpd-editor-toolbar-0_0">
+                            <button title="Bold" class="ql-bold"></button>
+                                <button title="Italic" class="ql-italic"></button>
+                                <button title="Underline" class="ql-underline"></button>
+                                <button title="Strike" class="ql-strike"></button>
+                                <button title="Ordered List" class="ql-list" value="ordered"></button>
+                                <button title="Unordered List" class="ql-list" value="bullet"></button>
+                                <button title="Blockquote" class="ql-blockquote"></button>
+                                <button title="Code Block" class="ql-code-block"></button>
+                                <button title="Link" class="ql-link"></button>
+                                <button title="Source Code" class="ql-sourcecode" data-wpde_button_name="sourcecode">{}</button>
+                                <button title="Spoiler" class="ql-spoiler" data-wpde_button_name="spoiler">[+]</button>
+                            <div class="wpd-editor-buttons-right">
+                            </div>
+        </div>
+                    </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="wpd-form-foot">
+                        <div class="wpdiscuz-textarea-foot">
+                                                        <div class="wpdiscuz-button-actions"></div>
+                        </div>
+                                <div class="wpd-form-row">
+                    <div class="wpd-form-col-left">
+                        <div class="wpdiscuz-item wc_name-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i class="fas fa-user"></i></div>
+                                    <input id="wc_name-0_0" value="" required="required" class="wc_name wpd-field" type="text" name="wc_name" placeholder="Name*" maxlength="50" pattern=".{3,50}" title="">
+                <label for="wc_name-0_0" class="wpdlb">Name*</label>
+                            </div>
+                        <div class="wpdiscuz-item wc_email-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i class="fas fa-at"></i></div>
+                                    <input id="wc_email-0_0" value="" required="required" class="wc_email wpd-field" type="email" name="wc_email" placeholder="Email*">
+                <label for="wc_email-0_0" class="wpdlb">Email*</label>
+                            </div>
+                            <div class="wpdiscuz-item wc_website-wrapper wpd-has-icon">
+                                            <div class="wpd-field-icon"><i class="fas fa-link"></i></div>
+                                        <input id="wc_website-0_0" value="" class="wc_website wpd-field" type="text" name="wc_website" placeholder="Website">
+                    <label for="wc_website-0_0" class="wpdlb">Website</label>
+                                    </div>
+                        </div>
+                <div class="wpd-form-col-right">
+                    <div class="wc-field-submit">
+                                            
+                                            <label class="wpd_label" wpd-tooltip="Notify of new replies to this comment">
+                            <input id="wc_notification_new_comment-0_0" class="wc_notification_new_comment-0_0 wpd_label__checkbox" value="comment" type="checkbox" name="wpdiscuz_notification_type">
+                            <span class="wpd_label__text">
+                                <span class="wpd_label__check">
+                                    <i class="fas fa-bell wpdicon wpdicon-on"></i>
+                                    <i class="fas fa-bell-slash wpdicon wpdicon-off"></i>
+                                </span>
+                            </span>
+                        </label>
+                                                                <input id="wpd-field-submit-0_0" class="wc_comm_submit wpd_not_clicked wpd-prim-button" type="submit" name="submit" value="Post Comment">
+        </div>
+                </div>
+                    <div class="clearfix"></div>
+        </div>
+                            </div>
+                    <input type="hidden" class="wpdiscuz_unique_id" value="0_0" name="wpdiscuz_unique_id">
+                </form>
+                        </div>
+                <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+                    <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+            <div class="wpdiscuz-comment-message" style="display: block;"></div>
+                            <div class="wpd-secondary-forms-social-content"></div><div class="clearfix"></div>
+                                        <form class="wpd_comm_form wpd-secondary-form-wrapper" method="post" enctype="multipart/form-data">
+                    <div class="wpd-field-comment">
+                        <div class="wpdiscuz-item wc-field-textarea">
+                            <div class="wpdiscuz-textarea-wrap ">
+                                            <div id="wpd-editor-wraper-wpdiscuzuniqueid" style="display: none;">
+                <div id="wpd-editor-char-counter-wpdiscuzuniqueid" class="wpd-editor-char-counter"></div>
+                <textarea id="wc-textarea-wpdiscuzuniqueid" required name="wc_comment" class="wc_comment wpd-field"></textarea>
+                <div id="wpd-editor-wpdiscuzuniqueid"></div>
+                        <div id="wpd-editor-toolbar-wpdiscuzuniqueid">
+                            <button title="Bold" class="ql-bold"></button>
+                                <button title="Italic" class="ql-italic"></button>
+                                <button title="Underline" class="ql-underline"></button>
+                                <button title="Strike" class="ql-strike"></button>
+                                <button title="Ordered List" class="ql-list" value="ordered"></button>
+                                <button title="Unordered List" class="ql-list" value="bullet"></button>
+                                <button title="Blockquote" class="ql-blockquote"></button>
+                                <button title="Code Block" class="ql-code-block"></button>
+                                <button title="Link" class="ql-link"></button>
+                                <button title="Source Code" class="ql-sourcecode" data-wpde_button_name="sourcecode">{}</button>
+                                <button title="Spoiler" class="ql-spoiler" data-wpde_button_name="spoiler">[+]</button>
+                            <div class="wpd-editor-buttons-right">
+                            </div>
+        </div>
+                    </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="wpd-form-foot">
+                        <div class="wpdiscuz-textarea-foot">
+                                                        <div class="wpdiscuz-button-actions"></div>
+                        </div>
+                                <div class="wpd-form-row">
+                    <div class="wpd-form-col-left">
+                        <div class="wpdiscuz-item wc_name-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i class="fas fa-user"></i></div>
+                                    <input id="wc_name-wpdiscuzuniqueid" value="" required="required" class="wc_name wpd-field" type="text" name="wc_name" placeholder="Name*" maxlength="50" pattern=".{3,50}" title="">
+                <label for="wc_name-wpdiscuzuniqueid" class="wpdlb">Name*</label>
+                            </div>
+                        <div class="wpdiscuz-item wc_email-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i class="fas fa-at"></i></div>
+                                    <input id="wc_email-wpdiscuzuniqueid" value="" required="required" class="wc_email wpd-field" type="email" name="wc_email" placeholder="Email*">
+                <label for="wc_email-wpdiscuzuniqueid" class="wpdlb">Email*</label>
+                            </div>
+                            <div class="wpdiscuz-item wc_website-wrapper wpd-has-icon">
+                                            <div class="wpd-field-icon"><i class="fas fa-link"></i></div>
+                                        <input id="wc_website-wpdiscuzuniqueid" value="" class="wc_website wpd-field" type="text" name="wc_website" placeholder="Website">
+                    <label for="wc_website-wpdiscuzuniqueid" class="wpdlb">Website</label>
+                                    </div>
+                        </div>
+                <div class="wpd-form-col-right">
+                    <div class="wc-field-submit">
+                                            
+                                            <label class="wpd_label" wpd-tooltip="Notify of new replies to this comment">
+                            <input id="wc_notification_new_comment-wpdiscuzuniqueid" class="wc_notification_new_comment-wpdiscuzuniqueid wpd_label__checkbox" value="comment" type="checkbox" name="wpdiscuz_notification_type">
+                            <span class="wpd_label__text">
+                                <span class="wpd_label__check">
+                                    <i class="fas fa-bell wpdicon wpdicon-on"></i>
+                                    <i class="fas fa-bell-slash wpdicon wpdicon-off"></i>
+                                </span>
+                            </span>
+                        </label>
+                                                                <input id="wpd-field-submit-wpdiscuzuniqueid" class="wc_comm_submit wpd_not_clicked wpd-prim-button" type="submit" name="submit" value="Post Comment">
+        </div>
+                </div>
+                    <div class="clearfix"></div>
+        </div>
+                            </div>
+                    <input type="hidden" class="wpdiscuz_unique_id" value="wpdiscuzuniqueid" name="wpdiscuz_unique_id">
+                </form>
+                        </div>
+                </div>
+                    </div>
+                               
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+            <div class="wpd-thread-head">
+                <div class="wpd-thread-info ">
+                    <span class="wpdtc">6</span> Comments                </div>
+                                <div class="wpd-space"></div>
+                <div class="wpd-thread-filter">
+                     
+                        <div class="wpd-filter wpdf-sorting">
+                                                                <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc wpdiscuz-sort-button-active" data-sorting="oldest">Oldest</span>
+                                                                <i class="fas fa-sort-down"></i>
+                            <div class="wpdiscuz-sort-buttons">
+                                                                    <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc" data-sorting="newest">Newest</span>
+                                                                        <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up" data-sorting="by_vote">Most Voted</span>
+                                                                </div>
+                        </div>
+                                        </div>
+            </div>
+            <div class="wpd-comment-info-bar">
+                <div class="wpd-current-view"><i class="fas fa-quote-left"></i> Inline Feedbacks</div>
+                <div class="wpd-filter-view-all">View all comments</div>
+            </div>
+                        <div class="wpd-thread-list">
+                <div id="wpd-comm-2_0" class="wpd-comment wpd_comment_level-1"><div class="wpd-comment-wrap wpd-blog-guest">
+    
+    <div id="comment-2" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    Ronit
+</div>
+    
+    
+    
+    
+    <div class="wpd-space"></div>
+    
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date">
+    <i class="far fa-clock" aria-hidden="true"></i>
+    11 days ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>When are we going to see it in wordpress plugin repository?</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg>
+    </div>
+    <div class="wpd-vote-result">0</div>
+    <div class="wpd-vote-down wpd_not_clicked wpd-dislike-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+    <span>Reply</span>
+</div>
+<div class="wpd-wpanel"></div>
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class="fas fa-chevron-up"></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id="wpdiscuz_form_anchor-2_0"></div><div id="wpd-comm-3_2" class="wpd-comment wpd-reply wpd_comment_level-2"><div class="wpd-comment-wrap wpd-blog-user wpd-blog-post_author">
+    
+    <div id="comment-3" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href="https://joychetry.github.io/v2/author/joy/" rel="noreferrer ugc" target="_blank">Joy Chetry</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="top">
+    <span>Author</span>
+</div>
+    
+    
+    
+    <div class="wpd-space"></div>
+    
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class="far fa-comments"></i>
+    Reply to 
+    <a href="#comment-2">
+        Ronit
+    </a>
+    <div class="wpd-comment-date">
+    <i class="far fa-clock" aria-hidden="true"></i>
+    11 days ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Preety soon! Keep cheking this post for update.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg>
+    </div>
+    <div class="wpd-vote-result">0</div>
+    <div class="wpd-vote-down wpd_not_clicked wpd-dislike-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class="fas fa-chevron-up"></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id="wpdiscuz_form_anchor-3_2"></div><div id="wpd-comm-4_3" class="wpd-comment wpd-reply wpd_comment_level-3"><div class="wpd-comment-wrap wpd-blog-guest">
+    
+    <div id="comment-4" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    Ronit Roka
+</div>
+    
+    
+    
+    
+    <div class="wpd-space"></div>
+    
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class="far fa-comments"></i>
+    Reply to 
+    <a href="#comment-3">
+        Joy Chetry
+    </a>
+    <div class="wpd-comment-date">
+    <i class="far fa-clock" aria-hidden="true"></i>
+    11 days ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Okay Joy thanks</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg>
+    </div>
+    <div class="wpd-vote-result">0</div>
+    <div class="wpd-vote-down wpd_not_clicked wpd-dislike-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id="wpdiscuz_form_anchor-4_3"></div></div></div></div><div id="wpd-comm-5_0" class="wpd-comment wpd_comment_level-1"><div class="wpd-comment-wrap wpd-blog-guest">
+    
+    <div id="comment-5" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    Pascal
+</div>
+    
+    
+    
+    
+    <div class="wpd-space"></div>
+    
+</div>
+    <div class="wpd-comment-subheader">
+    
+    <div class="wpd-comment-date">
+    <i class="far fa-clock" aria-hidden="true"></i>
+    9 days ago
+</div>
+    
+</div>
+    
+    <div class="wpd-comment-text">
+    <p>Hello Joy</p>
+<p>You removed the changelog here? Maybe because it will be on the WordPress Repo?</p>
+<p>Thanks 😉</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg>
+    </div>
+    <div class="wpd-vote-result">0</div>
+    <div class="wpd-vote-down wpd_not_clicked wpd-dislike-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+    <span>Reply</span>
+</div>
+<div class="wpd-wpanel"></div>
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class="fas fa-chevron-up"></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id="wpdiscuz_form_anchor-5_0"></div><div id="wpd-comm-6_5" class="wpd-comment wpd-reply wpd_comment_level-2"><div class="wpd-comment-wrap wpd-blog-user wpd-blog-post_author">
+    
+    <div id="comment-6" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    <a href="https://joychetry.github.io/v2/author/joy/" rel="noreferrer ugc" target="_blank">Joy Chetry</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="top">
+    <span>Author</span>
+</div>
+    
+    
+    
+    <div class="wpd-space"></div>
+    
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class="far fa-comments"></i>
+    Reply to 
+    <a href="#comment-5">
+        Pascal
+    </a>
+    <div class="wpd-comment-date">
+    <i class="far fa-clock" aria-hidden="true"></i>
+    9 days ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Yes you will see it in the wordpress repo once the plugin is uploaded, for now you can only download the plugin from github.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg>
+    </div>
+    <div class="wpd-vote-result">0</div>
+    <div class="wpd-vote-down wpd_not_clicked wpd-dislike-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    <div class="wpd-tool-wrap">
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies">
+    <i class="fas fa-chevron-up"></i>
+</div>
+</div>
+</div>
+</div>
+</div><div id="wpdiscuz_form_anchor-6_5"></div><div id="wpd-comm-7_6" class="wpd-comment wpd-reply wpd_comment_level-3"><div class="wpd-comment-wrap wpd-blog-guest">
+    
+    <div id="comment-7" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-comment-author ">
+    Pascal
+</div>
+    
+    
+    
+    
+    <div class="wpd-space"></div>
+    
+</div>
+    
+    <div class="wpd-reply-to">
+    <i class="far fa-comments"></i>
+    Reply to 
+    <a href="#comment-6">
+        Joy Chetry
+    </a>
+    <div class="wpd-comment-date">
+    <i class="far fa-clock" aria-hidden="true"></i>
+    9 days ago
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>you will have success with it 😉</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg>
+    </div>
+    <div class="wpd-vote-result wpd-up">1</div>
+    <div class="wpd-vote-down wpd_not_clicked wpd-dislike-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+    <span>Reply</span>
+</div>
+
+    <div class="wpd-space"></div>
+    
+</div>
+</div>
+</div><div id="wpdiscuz_form_anchor-7_6"></div></div></div></div>                
+                <div class="wpdiscuz-comment-pagination">
+                                    </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+    <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+    		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</article>
+					</div>
+		</div>
+		</div>
+				<div data-elementor-type="footer" data-elementor-id="51" class="elementor elementor-51 elementor-location-footer" data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+						<footer class="elementor-element elementor-element-34cc131f elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="34cc131f" data-element_type="section" data-settings='{"background_background":"classic","stretch_section":"section-stretched"}'>
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-34a4b471 elementor-column elementor-col-25 elementor-top-column" data-id="34a4b471" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-626cfdf9 elementor-widget elementor-widget-image" data-id="626cfdf9" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption">
+											<a href="https://joychetry.github.io/v2/">
+							<img width="1" height="1" src="https://joychetry.github.io/v2/wp-content/uploads/JoyChetry-logo.svg" class="elementor-animation-buzz-out attachment-large size-large" alt="Joy Chetry">								</a>
+											<figcaption class="widget-image-caption wp-caption-text">© 2020 Joy Chetry</figcaption>
+										</figure>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4242bdae elementor-column elementor-col-25 elementor-top-column" data-id="4242bdae" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-513a9f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="513a9f2" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-687609e elementor-column elementor-col-50 elementor-inner-column" data-id="687609e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7d9c976a elementor-mobile-align-right elementor-tablet-align-right elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="7d9c976a" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/about/">					<span class="elementor-icon-list-text">About</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/playlist/">					<span class="elementor-icon-list-text">Playlist</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c2c9977 elementor-column elementor-col-50 elementor-inner-column" data-id="c2c9977" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1db08bd elementor-mobile-align-left elementor-tablet-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="1db08bd" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/work/">					<span class="elementor-icon-list-text">Work</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/contact/">					<span class="elementor-icon-list-text">Contact</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-26ba7266 elementor-column elementor-col-25 elementor-top-column" data-id="26ba7266" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1c88f8cc elementor-mobile-align-center elementor-tablet-align-center elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="1c88f8cc" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Narmada Park, Chakan,</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Pune, Maharahtra</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-45c64c4b elementor-column elementor-col-25 elementor-top-column" data-id="45c64c4b" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a5b9eb4 elementor-widget__width-auto elementor-absolute elementor-view-default elementor-invisible elementor-widget elementor-widget-icon" data-id="a5b9eb4" data-element_type="widget" id="gotop" data-settings='{"sticky":"bottom","sticky_offset":100,"_position":"absolute","_animation":"fadeInDown","sticky_on":["desktop","tablet","mobile"],"sticky_effects_offset":0}' data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="#top-nav">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewbox="0 0 22.1 41.3" style="enable-background:new 0 0 22.1 41.3;" xml:space="preserve">
+<title>1</title>
+<g id="f1d121dd-2fd6-488e-ab66-46a3ffdb65e0">
+	<g id="a8bf0207-953c-4a3d-9d70-d9875ea768f4">
+		<path d="M0.3,30.8c-0.4-0.4-0.4-1.1,0-1.6c0.4-0.4,1.1-0.4,1.6,0l8,8v-36c0-0.6,0.5-1.1,1.1-1.1l0,0c0.6,0,1.1,0.5,1.1,1.1v36.1    l8-8c0.4-0.4,1.1-0.4,1.6,0c0.4,0.4,0.4,1.1,0,1.6l0,0l-10,10c-0.4,0.4-1.1,0.4-1.6,0L0.3,30.8z"></path>
+	</g>
+</g>
+</svg>			</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-dbb6375 elementor-widget-tablet__width-auto elementor-absolute elementor-widget__width-auto elementor-widget elementor-widget-html" data-id="dbb6375" data-element_type="widget" data-settings='{"_position":"absolute"}' data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script>
+var mybtn = document.getElementById("gotop");
+    mybtn.style.display = "none";
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    mybtn.style.display = "block";
+  } else {
+    mybtn.style.display = "none";
+  }
+}
+</script>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2a1bf7fe elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="2a1bf7fe" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper">
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-e1c5944" href="https://www.facebook.com/chetryjoy/" target="_blank">
+					<span class="elementor-screen-only">Facebook</span>
+					<i class="fab fa-facebook"></i>				</a>
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-819f628" href="https://instagram.com/joychetry/" target="_blank">
+					<span class="elementor-screen-only">Instagram</span>
+					<i class="fab fa-instagram"></i>				</a>
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-ce9d62b" href="https://twitter.com/joychetri/" target="_blank">
+					<span class="elementor-screen-only">Twitter</span>
+					<i class="fab fa-twitter"></i>				</a>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-367b2950 elementor-widget elementor-widget-heading" data-id="367b2950" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default"><a href="mailto:hello@joychetry.com?subject=Hey%20Joy,%20I%20want%20you%20to...">hello@joychetry.com</a></h3>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</footer>
+					</div>
+		</div>
+		</div>
+		
+<a id="wpdUserContentInfoAnchor" style="display:none;" rel="#wpdUserContentInfo" data-wpd-lity>wpDiscuz</a><div id="wpdUserContentInfo" style="overflow:auto;background:#FDFDF6;padding:20px;width:600px;max-width:100%;border-radius:6px;" class="lity-hide"></div><div id="wpd-editor-source-code-wrapper-bg"></div><div id="wpd-editor-source-code-wrapper"><textarea id="wpd-editor-source-code"></textarea><button id="wpd-insert-source-code">Insert</button><input type="hidden" id="wpd-editor-uid"></div>		<nav data-elementor-type="popup" data-elementor-id="499" class="elementor elementor-499 elementor-location-popup" data-elementor-settings='{"entrance_animation":"fadeIn","exit_animation":"fadeIn","entrance_animation_duration":{"unit":"px","size":"0.5","sizes":[]},"close_automatically":"20","prevent_scroll":"yes","open_selector":"#navHam","triggers":[],"timing":[]}'>
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+						<nav class="elementor-element elementor-element-bf812ce elementor-section-content-middle elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="bf812ce" data-element_type="section" data-settings='{"background_background":"classic"}'>
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<nav class="elementor-element elementor-element-6c82279 elementor-column elementor-col-33 elementor-top-column" data-id="6c82279" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3d77418 elementor-invisible elementor-widget elementor-widget-image" data-id="3d77418" data-element_type="widget" data-settings='{"_animation":"fadeInRight","_animation_delay":100}' data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption">
+											<a href="https://joychetry.github.io/v2/">
+							<img width="265" height="228" src="https://joychetry.github.io/v2/wp-content/uploads/joychetry-wlogo-e1575399316155.png" class="elementor-animation-buzz-out attachment-large size-large" alt="">								</a>
+											<figcaption class="widget-image-caption wp-caption-text">© 2020 Joy Chetry</figcaption>
+										</figure>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1928e3c elementor-align-center elementor-icon-list--layout-traditional elementor-invisible elementor-widget elementor-widget-icon-list" data-id="1928e3c" data-element_type="widget" data-settings='{"_animation":"fadeInRight","_animation_delay":100}' data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/tos/">					<span class="elementor-icon-list-text">Terms of Service</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/privacy-policy/">					<span class="elementor-icon-list-text">Privacy policy</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</nav>
+				<nav class="elementor-element elementor-element-2030f22 elementor-column elementor-col-33 elementor-top-column" data-id="2030f22" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ff21d9c elementor-align-right elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-invisible elementor-widget elementor-widget-icon-list" data-id="ff21d9c" data-element_type="widget" data-settings='{"_animation":"fadeInRight","_animation_delay":200}' data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/contact/">					<span class="elementor-icon-list-text">Contact</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/playlist/">					<span class="elementor-icon-list-text">Playlist</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/work/">					<span class="elementor-icon-list-text">Work</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</nav>
+				<nav class="elementor-element elementor-element-d9a0231 elementor-column elementor-col-33 elementor-top-column" data-id="d9a0231" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-da6046a elementor-align-right elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-invisible elementor-widget elementor-widget-icon-list" data-id="da6046a" data-element_type="widget" data-settings='{"_animation":"fadeInRight","_animation_delay":300}' data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/">					<span class="elementor-icon-list-text">Home</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/about/">					<span class="elementor-icon-list-text">About</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://joychetry.github.io/v2/blog/">					<span class="elementor-icon-list-text">Blog</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</nav>
+						</div>
+			</div>
+		</nav>
+					</div>
+		</div>
+		</nav>
+		<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpdiscuzAjaxObj = {"wc_hide_replies_text":"Hide Replies","wc_show_replies_text":"View Replies","wc_msg_required_fields":"Please fill out required fields","wc_invalid_field":"Some of field value is invalid","wc_error_empty_text":"please fill out this field to comment","wc_error_url_text":"url is invalid","wc_error_email_text":"email address is invalid","wc_invalid_captcha":"Invalid Captcha Code","wc_login_to_vote":"You Must Be Logged In To Vote","wc_deny_voting_from_same_ip":"You are not allowed to vote for this comment","wc_self_vote":"You cannot vote for your comment","wc_vote_only_one_time":"You've already voted for this comment","wc_voting_error":"Voting Error","wc_comment_edit_not_possible":"Sorry, this comment is no longer possible to edit","wc_comment_not_updated":"Sorry, the comment was not updated","wc_comment_not_edited":"You've not made any changes","wc_msg_input_min_length":"Input is too short","wc_msg_input_max_length":"Input is too long","wc_spoiler_title":"Spoiler Title","wc_cannot_rate_again":"You cannot rate again","wc_not_allowed_to_rate":"You're not allowed to rate here","wc_follow_user":"Follow this user","wc_unfollow_user":"Unfollow this user","wc_follow_success":"You started following this comment author","wc_follow_canceled":"You stopped following this comment author.","wc_follow_email_confirm":"Please check your email and confirm the user following request.","wc_follow_email_confirm_fail":"Sorry, we couldn't send confirmation email.","wc_follow_login_to_follow":"Please login to follow users.","wc_follow_impossible":"We are sorry, but you can't follow this user.","wc_follow_not_added":"Following failed. Please try again later.","is_user_logged_in":"","commentListLoadType":"0","commentListUpdateType":"0","commentListUpdateTimer":"30","liveUpdateGuests":"0","wordpressThreadCommentsDepth":"5","wordpressIsPaginate":"0","commentTextMaxLength":null,"commentTextMinLength":"1","storeCommenterData":"100000","isGoodbyeCaptchaActive":"","socialLoginAgreementCheckbox":"1","enableFbLogin":"0","enableFbShare":"0","facebookAppID":"","facebookUseOAuth2":"0","enableGoogleLogin":"0","googleClientID":"","googleClientSecret":"","cookiehash":"ad296bcdaa91fcdc14d81c1511a2bcf3","isLoadOnlyParentComments":"0","commentFormView":"0","enableDropAnimation":"0","isNativeAjaxEnabled":"1","enableBubble":"0","bubbleLiveUpdate":"0","bubbleHintTimeout":"45","bubbleHintHideTimeout":"10","cookieHideBubbleHint":"wpdiscuz_hide_bubble_hint","bubbleShowNewCommentMessage":"1","bubbleLocation":"content_left","firstLoadWithAjax":"0","wc_copied_to_clipboard":"Copied to clipboard!","inlineFeedbackAttractionType":"disable","loadRichEditor":"1","wpDiscuzReCaptchaSK":"","wpDiscuztheme":"light","wpDiscuzReCaptchaVersion":"2.0","wc_captcha_show_for_guest":"0","wc_captcha_show_for_members":"0","wpDiscuzIsShowOnSubscribeForm":"0","wmuEnabled":"0","wmuInput":"wmu_files","wmuMaxFileCount":"1","wmuMaxFileSize":"2097152","wmuPostMaxSize":"1048576000","wmuIsLightbox":"0","wmuMimeTypes":{"jpg|jpeg|jpe":"image\/jpeg","gif":"image\/gif","png":"image\/png","bmp":"image\/bmp","tiff|tif":"image\/tiff","ico":"image\/x-icon"},"wmuPhraseConfirmDelete":"Are you sure you want to delete this attachment?","wmuPhraseNotAllowedFile":"Not allowed file type","wmuPhraseMaxFileCount":"Maximum number of uploaded files is 1","wmuPhraseMaxFileSize":"Maximum upload file size is 2MB","wmuPhrasePostMaxSize":"Maximum post size is 1000MB","msgEmptyFile":"File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.","msgPostIdNotExists":"Post ID not exists","msgUploadingNotAllowed":"Sorry, uploading not allowed for this post","msgPermissionDenied":"You do not have sufficient permissions to perform this action","wmuSecurity":"2fd0bd8cc4","wmuKeyImages":"images","wmuSingleImageWidth":"auto","wmuSingleImageHeight":"200","version":"7.0.2","wc_post_id":"1157","loadLastCommentId":"0","isCookiesEnabled":"1","dataFilterCallbacks":[],"is_email_field_required":"1","url":"https:\/\/joychetry.github.io\/v2\/wp-admin\/admin-ajax.php","customAjaxUrl":"https:\/\/joychetry.github.io\/v2\/wp-content\/plugins\/wpdiscuz\/utils\/ajax\/wpdiscuz-ajax.php","bubbleUpdateUrl":"https:\/\/joychetry.github.io\/v2\/wp-json\/wpdiscuz\/v1\/update"};
+var wpdiscuzUCObj = {"msgConfirmDeleteComment":"Are you sure you want to delete this comment?","msgConfirmCancelSubscription":"Are you sure you want to cancel this subscription?","msgConfirmCancelFollow":"Are you sure you want to cancel this follow?"};
+/* ]]> */
+</script>
+<script type="text/javascript">
+        var wpdiscuzEditorOptions = {
+        modules: {
+        toolbar: "",
+        counter: {
+        uniqueID: "",
+        maxcount : 0,
+        mincount : 1,
+        },
+                },
+        placeholder: 'Join the discussion',
+        theme: 'snow',
+        debug: 'error'
+        };
+        
+</script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/wpdiscuz/assets/js/wpdiscuz-combo.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/easy-table-of-contents/vendor/smooth-scroll/jquery.smooth-scroll.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"1","scroll_offset":"30"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script>
+<script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/joychetry.github.io\/v2\/wp-admin\/admin-ajax.php","nonce":"d41c908198","i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-includes/js/jquery/ui/position.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js"></script>
+<script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.9","urls":{"assets":"https:\/\/joychetry.github.io\/v2\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":1157,"title":"Infinite%20Scroll%20in%20Elementor%20%28New%20Plugin%29%20-%20Joy%20Chetry","excerpt":"Infinite Scroll Elementor adds functions like Infinite Scroll, AJAX Load More Button, and Lazy Loading to Elementor Post Grid, WooCommerce, and post templates.","featuredImage":"https:\/\/joychetry.github.io\/v2\/wp-content\/uploads\/infinite-scroll-elementor.jpg"}};
+</script>
+<script type="text/javascript" src="https://joychetry.github.io/v2/wp-content/plugins/elementor/assets/js/frontend.min.js"></script>
+
+</body>
+</html>

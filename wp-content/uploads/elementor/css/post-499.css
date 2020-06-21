@@ -1,0 +1,54 @@
+.elementor-499 .elementor-element.elementor-element-bf812ce > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {align-content: center;align-items: center;}
+.elementor-499 .elementor-element.elementor-element-bf812ce {overflow: hidden;transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;padding: 0% 15% 0% 15%;}
+.elementor-499 .elementor-element.elementor-element-bf812ce > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-499 .elementor-element.elementor-element-3d77418 .elementor-image img {max-width: 25%;}
+.elementor-499 .elementor-element.elementor-element-3d77418 .widget-image-caption {text-align: center;color: #fff;font-size: 16px;font-weight: 600;text-transform: uppercase;font-style: normal;line-height: 2.5em;}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {padding-bottom: calc(0px / 2);}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {margin-top: calc(0px / 2);}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {margin-right: calc(0px / 2);margin-left: calc(0px / 2);}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-items.elementor-inline-items {margin-right: calc(-0px / 2);margin-left: calc(-0px / 2);}
+body.rtl .elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {left: calc(-0px / 2);}
+body:not(.rtl) .elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {right: calc(-0px / 2);}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-icon i {font-size: 14px;}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-icon svg {width: 14px;}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-text {color: #fff;}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-item:hover .elementor-icon-list-text {color: #cfcfcf;}
+.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-item {font-size: 25px;font-weight: 600;}
+.elementor-499 .elementor-element.elementor-element-ff21d9c .elementor-icon-list-icon i {font-size: 14px;}
+.elementor-499 .elementor-element.elementor-element-ff21d9c .elementor-icon-list-icon svg {width: 14px;}
+.elementor-499 .elementor-element.elementor-element-ff21d9c .elementor-icon-list-text {color: #fff;}
+.elementor-499 .elementor-element.elementor-element-ff21d9c .elementor-icon-list-item:hover .elementor-icon-list-text {color: #cfcfcf;}
+.elementor-499 .elementor-element.elementor-element-ff21d9c .elementor-icon-list-item {font-size: 60px;font-weight: 600;}
+.elementor-499 .elementor-element.elementor-element-da6046a .elementor-icon-list-icon i {font-size: 14px;}
+.elementor-499 .elementor-element.elementor-element-da6046a .elementor-icon-list-icon svg {width: 14px;}
+.elementor-499 .elementor-element.elementor-element-da6046a .elementor-icon-list-text {color: #fff;}
+.elementor-499 .elementor-element.elementor-element-da6046a .elementor-icon-list-item:hover .elementor-icon-list-text {color: #cfcfcf;}
+.elementor-499 .elementor-element.elementor-element-da6046a .elementor-icon-list-item {font-size: 60px;font-weight: 600;}
+#elementor-popup-modal-499 .dialog-message {width: 100vw;height: auto;}
+#elementor-popup-modal-499 {justify-content: center;align-items: center;pointer-events: all;background-color: #4e4e50;}
+#elementor-popup-modal-499 .dialog-close-button {display: block;top: -333px;font-size: 30px;}
+#elementor-popup-modal-499 .dialog-widget-content {animation-duration: .5s;background-color: #4e4e50;}
+body:not(.rtl) #elementor-popup-modal-499 .dialog-close-button {right: 290px;}
+body.rtl #elementor-popup-modal-499 .dialog-close-button {left: 290px;}
+#elementor-popup-modal-499 .dialog-close-button i {color: #fff;}
+#elementor-popup-modal-499 .dialog-close-button:hover i {color: #cfcfcf;}
+@media (max-width:1024px) {.elementor-499 .elementor-element.elementor-element-bf812ce {padding: 0% 10% 0% 10%;}
+	.elementor-499 .elementor-element.elementor-element-3d77418 {text-align: center;}
+	.elementor-499 .elementor-element.elementor-element-3d77418 .widget-image-caption {font-size: 15px;}
+	.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-item {font-size: 21px;}
+	.elementor-499 .elementor-element.elementor-element-ff21d9c .elementor-icon-list-item {font-size: 45px;}
+	.elementor-499 .elementor-element.elementor-element-da6046a .elementor-icon-list-item {font-size: 45px;}
+	#elementor-popup-modal-499 .dialog-close-button {top: -388px;font-size: 30px;}
+	body:not(.rtl) #elementor-popup-modal-499 .dialog-close-button {right: 46px;}
+	body.rtl #elementor-popup-modal-499 .dialog-close-button {left: 46px;}}
+@media (max-width:767px) {.elementor-499 .elementor-element.elementor-element-bf812ce {padding: 0% 0% 0% 0%;}
+	.elementor-499 .elementor-element.elementor-element-6c82279 > .elementor-element-populated {padding: 30px 0px 0px 0px;}
+	.elementor-499 .elementor-element.elementor-element-3d77418 > .elementor-widget-container {margin: 0% 0% -5% 0%;}
+	.elementor-499 .elementor-element.elementor-element-1928e3c .elementor-icon-list-item {font-size: 18px;}
+	.elementor-499 .elementor-element.elementor-element-2030f22 {width: 50%;}
+	.elementor-499 .elementor-element.elementor-element-ff21d9c .elementor-icon-list-item {font-size: 28px;}
+	.elementor-499 .elementor-element.elementor-element-d9a0231 {width: 50%;}
+	.elementor-499 .elementor-element.elementor-element-da6046a .elementor-icon-list-item {font-size: 28px;}
+	#elementor-popup-modal-499 .dialog-close-button {top: -150px;font-size: 25px;}
+	body:not(.rtl) #elementor-popup-modal-499 .dialog-close-button {right: 20px;}
+	body.rtl #elementor-popup-modal-499 .dialog-close-button {left: 20px;}}
